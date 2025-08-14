@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-g">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web NFC 讀取器</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            min-height: 100vh;
+            text-align: center;
+            background-color: #f0f2f5;
+            margin: 0;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        .container {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+            width: 100%;
+        }
+        h1 {
+            color: #1c1e21;
+        }
+        p {
+            color: #606770;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        #scanButton {
+            font-size: 1.2rem;
+            padding: 0.8rem 1.5rem;
+            cursor: pointer;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            border-radius: 6px;
+            transition: background-color 0.3s;
+            width: 100%;
+        }
+        #scanButton:disabled {
+            background-color: #cccccc;
+            cursor: not-allowed;
+        }
+        #scanButton:hover:not(:disabled) {
+            background-color: #0056b3;
+        }
+        #log {
+            margin-top: 1.5rem;
+            text-align: left;
+            white-space: pre-wrap; /* 讓換行符號和空格被保留 */
+            word-wrap: break-word; /* 避免長字串撐破版面 */
+            background-color: #e9ebee;
+            padding: 1rem;
+            border-radius: 6px;
+            font-family: "Courier New", Courier, monospace;
+            font-size: 0.9rem;
+            min-height: 100px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Web NFC 讀取器</h1>
+        <p>請點擊下方按鈕，然後將您的 NFC 標籤靠近手機背面。</p>
+        <button id="scanButton">開始掃描</button>
+        <pre id="log">日誌訊息將會顯示在這裡...</pre>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
