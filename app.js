@@ -39,14 +39,14 @@ document.addEventListener('DOMContentLoaded', () => {
             ndef.addEventListener('reading', ({ message, serialNumber }) => {
                 log(`> 成功讀取到 NFC 標籤！`);
                 log(`  - 標籤序號 (SN): ${serialNumber}`);
-                log(`  - NDEF 訊息記錄數量: ${message.records.length}`);
+                //log(`  - NDEF 訊息記錄數量: ${message.records.length}`);
 
-                for (const record of message.records) {
-                    log(`--- 新紀錄 ---`);
-                    log(`  - 記錄類型 (Type): ${record.recordType}`);
-                    log(`  - MIME 類型 (MIME): ${record.mediaType || 'N/A'}`);
-                    log(`  - 資料 (Data): ${decodeRecord(record)}`);
-                }
+               // for (const record of message.records) {
+              //      log(`--- 新紀錄 ---`);
+              //      log(`  - 記錄類型 (Type): ${record.recordType}`);
+              //      log(`  - MIME 類型 (MIME): ${record.mediaType || 'N/A'}`);
+              //      log(`  - 資料 (Data): ${decodeRecord(record)}`);
+             //   }
             });
 
             // 處理讀取錯誤（例如標籤損壞）
